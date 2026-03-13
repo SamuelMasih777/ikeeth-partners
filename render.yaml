@@ -20,7 +20,7 @@ services:
   - type: static
     name: ikeeth-frontend
     rootDir: frontend
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: npm install && npm run build
     publishDir: build
     envVars:
       - key: REACT_APP_BACKEND_URL
