@@ -1,0 +1,128 @@
+/* App-specific styles */
+.App {
+    min-height: 100vh;
+}
+
+/* Section styles */
+.section-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+    .section-container {
+        padding: 0 48px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-container {
+        padding: 0 96px;
+    }
+}
+
+/* Bento grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+}
+
+.bento-item-4 {
+    grid-column: span 12;
+}
+
+.bento-item-8 {
+    grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+    .bento-item-4 {
+        grid-column: span 4;
+    }
+    .bento-item-8 {
+        grid-column: span 8;
+    }
+    .bento-item-6 {
+        grid-column: span 6;
+    }
+}
+
+/* Text gradient */
+.text-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Link hover effect */
+.link-hover {
+    position: relative;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #EDEDED;
+    transition: width 0.3s ease;
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+/* Form focus styles */
+.form-input:focus {
+    outline: none;
+    border-color: #FFFFFF;
+}
+
+/* Card gradient overlay */
+.card-gradient {
+    background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Hero image overlay */
+.hero-overlay {
+    background: linear-gradient(180deg, rgba(3,3,3,0.7) 0%, rgba(3,3,3,1) 100%);
+}
+
+/* Team card grayscale */
+.team-image {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.team-card:hover .team-image {
+    filter: grayscale(0%);
+}
+
+/* Stats counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    animation: countUp 0.5s ease-out forwards;
+}
+
+/* Portfolio card colors */
+.portfolio-ai { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); }
+.portfolio-fintech { background: linear-gradient(135deg, #164e63 0%, #0e7490 100%); }
+.portfolio-climate { background: linear-gradient(135deg, #14532d 0%, #166534 100%); }
+.portfolio-healthcare { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); }
+.portfolio-enterprise { background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%); }
+.portfolio-biotech { background: linear-gradient(135deg, #581c87 0%, #7c3aed 100%); }
